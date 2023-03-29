@@ -1,0 +1,402 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+
+/*bloklarning width ni o`zgarishini verstka uchun qulay qilib beradi*/
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*quyidagi teglarni blok qilib beradi*/
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/*elementlarning hossalarini barcha brauzerlar uchun mo`tadillashtirib beradi*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjusst: 100%;
+  -moz-text-size-adjusst: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*quyidagi teglarning shriftlar oilasini vorislashi taminlanadi*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/*turli brauzerlarning o`ziga xos hususiyatlarini olib tashlash*/
+input:-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:-moz-focus-innesr {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*sarlavharning odatdagi stillarini nullashtirish*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* для удаления стрелок в инпутах */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(52, 67, 69);
+  background: radial-gradient(circle, rgb(52, 67, 69) 0%, rgb(19, 25, 25) 100%);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 500px;
+  height: 536px;
+  margin: 0 auto;
+}
+
+.header__h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 56px;
+  margin-bottom: 34px;
+  color: #fff;
+}
+
+.main {
+  height: 434px;
+  background: rgba(197, 197, 197, 0.5);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.form {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+.form__inp::placeholder {
+  color: #fff;
+}
+.form__inp {
+  width: 360px;
+  height: 40px;
+  border: 1px solid rgb(52, 67, 69);
+  border-radius: 6px;
+  padding: 0 12px;
+  background: rgb(52, 67, 69);
+  color: #fff;
+}
+.form__btn {
+  width: 60px;
+  height: 40px;
+  background: rgb(52, 67, 69);
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+}
+.form__btn:hover {
+  background: rgb(69, 88, 91);
+}
+.form__btn:active {
+  background: rgb(33, 42, 43);
+}
+
+.list {
+  width: 438px;
+  height: 284px;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  width: 392px;
+  min-height: 58px;
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 5px;
+  border: 1px solid transparent;
+  background: rgb(52, 67, 69);
+  color: white;
+  transition: 0.5s;
+  z-index: 20;
+}
+.item:hover {
+  box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.3);
+}
+.item:hover > span {
+  box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.3);
+}
+.item__btns {
+  position: absolute;
+  right: 5px;
+  display: flex;
+  align-items: center;
+}
+.item__btn {
+  width: 31.5px;
+  height: 31.5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  transition: 0.25s;
+  color: #fff;
+}
+.item__btn:hover {
+  background: #fff;
+  color: rgb(52, 67, 69);
+}
+
+.footer__btn {
+  padding: 5px 10px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  transition: 0.2s;
+}
+.footer__btn:hover {
+  box-shadow: 0 0 10px #fff;
+}
+
+.required {
+  border: 1px solid red;
+}
+
+.itemInp {
+  width: 240px;
+  border: none;
+  box-shadow: 0 0 10px #c4ebff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.item__input {
+  width: 200px;
+  padding: 10px;
+  height: 80%;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.date {
+  margin-left: 40px;
+  font-size: 10px;
+}
+
+.filter {
+  color: #fff;
+}
+
+select {
+  border-radius: 8px;
+  border: none;
+  background: rgb(52, 67, 69);
+  color: #fff;
+  padding: 5px;
+}
+
+.emptyInp {
+  animation: emptyInp 0.5s 1;
+  box-shadow: 0 0 10px red;
+}
+
+@keyframes emptyInp {
+  0% {
+    transform: scale(1, 1);
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2, 1.2);
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: scale(1, 1);
+    transform: rotate(0deg);
+  }
+}
+.deleteEffect {
+  animation: deleteEffect 0.5s forwards;
+}
+
+@keyframes deleteEffect {
+  0% {
+    transform: scaleY(1);
+    min-height: 58px;
+  }
+  25% {
+    transform: scaleY(0.7);
+    min-height: 39px;
+  }
+  50% {
+    transform: scaleY(0.5);
+    min-height: 29px;
+  }
+  75% {
+    transform: scaleY(0.2);
+    min-height: 19px;
+  }
+  100% {
+    transform: scaleY(0);
+    min-height: 0px;
+  }
+}
+.nth {
+  left: -30px;
+  position: absolute;
+  background: rgb(52, 67, 69);
+  padding: 5px 8px;
+  cursor: default;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.label {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  margin: 0 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  display: none;
+}
+
+.item__form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+span[class=empty] {
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  width: 100%;
+}
+
+.todo.completed {
+  text-decoration: line-through;
+}
+
+@keyframes textDecor {
+  0% {
+    width: 0%;
+    height: 2px;
+  }
+  100% {
+    width: 85%;
+    height: 2px;
+  }
+}
+.active--inp {
+  box-shadow: 0 0 10px rgba(12, 255, 235, 0.829) !important;
+  height: 70px;
+  animation: activeInp 0.5s forwards;
+}
+.active--inp > span {
+  box-shadow: 0 0 10px rgba(12, 255, 235, 0.829) !important;
+}
+
+@keyframes activeInp {
+  0% {
+    min-height: 58px;
+    margin: 0;
+  }
+  100% {
+    min-height: 70px;
+    margin: 10px 0;
+  }
+}
+.item.dragging :where(.nth, .item__section) {
+  display: none;
+}

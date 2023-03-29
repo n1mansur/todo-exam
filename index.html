@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__container container">
+        <header class="header">
+          <h1 class="header__h1">To Do list APP</h1>
+        </header>
+        <div class="main">
+          <div class="main__content">
+            <form class="form">
+              <input
+                placeholder="Text input"
+                class="form__inp"
+                type="text"
+                name="todo"
+                id="listValue"
+              />
+              <button id="btn" type="submit" class="form__btn">Add</button>
+            </form>
+            <div class="filter">
+              Filter by status:
+              <select name="status">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="proccess">Proccess</option>
+              </select>
+            </div>
+            <ul class="list sortable-list">
+              <li class="item" id="${v.id}" draggable="true">
+                <span class="nth">1</span>
+                <div class="item__section">
+                  <div class="date">
+                    <span class="hours">20:00</span>
+                    <span class="days">23.03.2023</span>
+                  </div>
+                  <div class="item__form">
+                    <label class="label">
+                      <input type="checkbox" class="checkbox" />
+                    </label>
+                    <input disabled class="todo item__input" value="Watch TV" />
+                  </div>
+                </div>
+                <div class="item__btns">
+                  <button class="edit item__btn">
+                    <i class="bx bx-sm bxs-pencil"></i>
+                  </button>
+                  <button
+                    style="display: none"
+                    id="${v.id}"
+                    class="save item__btn"
+                  >
+                    <i class="bx bx-md bx-check"></i>
+                  </button>
+                  <button
+                    style="display: none"
+                    id="${v.id}"
+                    class="cancel item__btn"
+                  >
+                    <i class="bx bx-md bx-undo"></i>
+                  </button>
+                  <button id="${v.id}" class="delete item__btn">
+                    <i class="bx bx-md bx-x"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="item" id="${v.id}">
+                <span class="nth">2</span>
+                <div class="item__section">
+                  <div class="date">
+                    <span class="hours">20:00</span>
+                    <span class="days">23.03.2023</span>
+                  </div>
+                  <div class="item__form">
+                    <label class="label">
+                      <input type="checkbox" class="checkbox" />
+                    </label>
+                    <span class="span--line"></span>
+                    <input disabled class="todo item__input" value="Watch TV" />
+                  </div>
+                </div>
+                <div class="item__btns">
+                  <button class="edit item__btn">
+                    <i class="bx bx-sm bxs-pencil"></i>
+                  </button>
+                  <button
+                    style="display: none"
+                    id="${v.id}"
+                    class="save item__btn"
+                  >
+                    <i class="bx bx-md bx-check"></i>
+                  </button>
+                  <button
+                    style="display: none"
+                    id="${v.id}"
+                    class="cancel item__btn"
+                  >
+                    <i class="bx bx-md bx-undo"></i>
+                  </button>
+                  <button id="${v.id}" class="delete item__btn">
+                    <i class="bx bx-md bx-x"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="footer">
+            <button class="footer__btn">Clear all</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
