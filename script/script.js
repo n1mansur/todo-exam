@@ -43,7 +43,6 @@ const filterStatus = (status) => {
       return todos
   }
 }
-console.log(todos);
 const render = () => {
   localStorage.setItem('todos', JSON.stringify(todos))
   list.innerHTML = ''
